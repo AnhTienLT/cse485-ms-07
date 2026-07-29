@@ -1,20 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniShop Admin — Categories (sap xay dung)</title>
-</head>
-<body>
-    <h1>MiniShop Admin — Categories (sap xay dung)</h1>
+@extends('layouts.admin')
 
-    <nav>
-        <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-        <a href="{{ route('admin.categories.index') }}">Categories</a>
-        <a href="{{ route('admin.products.index') }}">Products</a>
-        <a href="{{ route('admin.about') }}">About</a>
-    </nav>
+@section('title', 'MiniShop Admin — Categories')
+@section('page_heading', 'MiniShop Admin — Categories')
 
-    <p>Trang quản lý danh mục đang được xây dựng trong P06.</p>
-</body>
-</html>
+@section('content')
+    <div class="card">
+        <a href="{{ route('admin.categories.create') }}" class="btn">Them moi</a>
+    </div>
+
+    <div class="card">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- fake data P07; thay Eloquent P09–11 -->
+                <tr>
+                    <td>1</td>
+                    <td>Dien thoai</td>
+                    <td>Smartphone</td>
+                    <td>Edit</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Laptop</td>
+                    <td>Laptop</td>
+                    <td>Edit</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Phu kien</td>
+                    <td>Accessories</td>
+                    <td>Edit</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+@endsection

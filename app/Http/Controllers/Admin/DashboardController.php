@@ -21,4 +21,11 @@ class DashboardController extends Controller
     {
         return view('admin.about');
     }
+
+    public function flashDemo()
+    {
+        return redirect()
+            ->route('admin.dashboard')
+            ->with('success', 'Layout OK — san sang Migration');
+    }
 }
